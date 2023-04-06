@@ -1,0 +1,49 @@
+package com.assignment;
+
+import java.util.Scanner;
+
+
+public class AmountDemo {
+	
+	public static void main(String[] args) {
+		
+		AccountQ3 acc = new AccountQ3("123456", 2000.00);
+		
+		
+		
+		Scanner sc = new Scanner(System.in);
+		
+		
+		System.out.println("To Deposit Enter 1");
+		System.out.println("To Withdraw Enter 2");
+		
+		int num = sc.nextInt();
+		
+		
+		if(num==1) {
+			
+			System.out.println("Enter amount you want to deposit");
+			
+			double amount = sc.nextDouble();
+			acc.deposit(amount);
+		}
+		
+		else if(num==2);
+		
+		System.out.println("Enter amount you want to withdraw");
+		double amount =sc.nextDouble();
+		
+		
+		try {
+			
+			
+			System.out.println(acc.withdraw(amount));
+		}
+		catch (InsufficientFundsException e) {
+			
+		
+			System.out.println("Please enter valid option");
+		}
+	}
+
+}

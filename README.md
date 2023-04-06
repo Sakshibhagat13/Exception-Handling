@@ -15,4 +15,4 @@ withdraw(amount) method throws the InsufficientFundException to the caller with 
 Create an AccountDemo class with the main method and perform the following task: 
 Create the Account class object by passing the Account number and minimum balance 500. You can deposit the amount into that account by invoking the deposit() method by passing the deposit amount as an argument. 
 If you have a balance in your account, you have to withdraw the amount by invoking the withdraw() method by passing a suitable amount as an argument. But, if your requested amount is more than the available balance, handle the exception and print the proper message. 
-Note: make sure the application should be terminated normally. 
+Note: make sure the application should be terminated normally.

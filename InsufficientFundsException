@@ -1,0 +1,18 @@
+package com.assignment;
+
+
+	
+	public class InsufficientFundsException extends Exception{
+		
+		public InsufficientFundsException() {
+			
+			
+		}
+		
+		public InsufficientFundsException(String m) {
+			
+			super(m);
+		}
+		
+	}
+

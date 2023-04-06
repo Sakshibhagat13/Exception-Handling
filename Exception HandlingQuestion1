@@ -1,0 +1,121 @@
+package com.assignment;
+
+
+	
+	public class InsufficientFundsException extends Exception{
+		
+		public InsufficientFundsException() {
+			
+			
+		}
+		
+		public InsufficientFundsException(String m) {
+			
+			super(m);
+		}
+		
+	}
+
+
+
+
+public class AccountQ3 {
+	
+	
+	
+	String accountNumber;
+	double balance;
+	
+	public AccountQ3() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public AccountQ3(String accountNumber, double balance) {
+		super();
+		this.accountNumber = accountNumber;
+		this.balance = balance;
+	}
+	
+	public void deposit(double amount) {
+		
+		System.out.println("Amount is successfully deposited");
+		
+		System.out.println("New balance is " +(balance+amount));
+	}
+
+		
+	public double withdraw(double amount)	throws InsufficientFundsException{
+		
+		if(balance>=amount) {
+			
+			balance =balance-amount;
+			
+			return balance;
+		}
+		else {
+			
+			InsufficientFundsException isfu = new InsufficientFundsException("Insufficient balance");
+			
+			throw isfu;
+		}
+		
+		
+	}
+
+	@Override
+	public String toString() {
+		return "AccountQ3 [accountNumber=" + accountNumber + ", balance=" + balance + "]";
+	}
+}
+
+
+
+
+import java.util.Scanner;
+
+
+public class AmountDemo {
+	
+	public static void main(String[] args) {
+		
+		AccountQ3 acc = new AccountQ3("123456", 2000.00);
+		
+		
+		
+		Scanner sc = new Scanner(System.in);
+		
+		
+		System.out.println("To Deposit Enter 1");
+		System.out.println("To Withdraw Enter 2");
+		
+		int num = sc.nextInt();
+		
+		
+		if(num==1) {
+			
+			System.out.println("Enter amount you want to deposit");
+			
+			double amount = sc.nextDouble();
+			acc.deposit(amount);
+		}
+		
+		else if(num==2);
+		
+		System.out.println("Enter amount you want to withdraw");
+		double amount =sc.nextDouble();
+		
+		
+		try {
+			
+			
+			System.out.println(acc.withdraw(amount));
+		}
+		catch (InsufficientFundsException e) {
+			
+		
+			System.out.println("Please enter valid option");
+		}
+	}
+
+}
+

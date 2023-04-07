@@ -15,7 +15,7 @@ withdraw(amount): double
 withdraw(amount) method throws the InsufficientFundException to the caller with suitable message. when the supplied amount is greater than the balance amount. 
 
 Create an AccountDemo class with the main method and perform the following task: 
-Create the Account class object by passing the Account number and minimum balance 500. You can deposit the amount into that account by invoking the deposit() method by passing the deposit amount as an argument. 
+Create the Account class object by passing the Account number and minimum balance 2000. You can deposit the amount into that account by invoking the deposit() method by passing the deposit amount as an argument. 
 If you have a balance in your account, you have to withdraw the amount by invoking the withdraw() method by passing a suitable amount as an argument. But, if your requested amount is more than the available balance, handle the exception and print the proper message. 
 Note: make sure the application should be terminated normally.
 
@@ -35,4 +35,13 @@ Sample input and output 2:
 Enter an integer: Sakshi
 Entered input is not a valid format for an integer. 
 The work has been done successfully 
+
+
+
+
+Question 3
+
+
+Write a program that accepts 2 integers a and b as input and finds the quotient of a/b. This program may generate an Arithmetic Exception. Use exception handling mechanisms to handle this exception. In the catch block, print the message as shown in the sample output. also, illustrate the use of the finally block. Print the message “Inside finally block” 
+
 
